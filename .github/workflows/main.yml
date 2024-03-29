@@ -21,7 +21,7 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-          role-to-assume: arn:aws:iam::286281612134:role/Saad-OIDC-test
+          role-to-assume: arn:aws:iam::552690521012:role/Leslieanne-gitHubrole
           aws-region: us-east-1
 
     - name: Installing requirements
@@ -39,5 +39,5 @@ jobs:
     - name: Deploy to s3
       run: |
         cd website
-        aws s3 sync build/ s3://pearl-ai-dev-frontend-002/
-        aws cloudfront create-invalidation --distribution-id E3GI755NHSP5LI --paths '/*'
+        aws s3 sync build/ s3://pearl-ai-dev-frontend-leslieanne/
+        aws cloudfront create-invalidation --distribution-id E2XMPL6VIZ7BMY --paths '/*'
